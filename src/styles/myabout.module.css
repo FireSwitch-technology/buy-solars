@@ -124,6 +124,7 @@
   .wraps{
     display: flex;
     justify-content: space-between;
+    width: 50%;
   }
   
   .imageContainer {
@@ -235,6 +236,12 @@
         align-items: center;
         width: 100%;
     gap: 20px;
+      }
+
+      .wraps{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
       }
   }
 

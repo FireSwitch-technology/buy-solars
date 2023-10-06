@@ -2,8 +2,7 @@
 // import { BsArrowRight } from 'react-icons/bs';
 import React, { useState, useEffect } from 'react';
 import { BsArrowRight } from 'react-icons/bs';
-import styled from 'styled-components';
-
+import Styles from '@/styles/mynew.module.css'
 
 const ArrivalSection = () => {
   const [currentIndex1, setCurrentIndex1] = useState(0);
@@ -82,23 +81,21 @@ const ArrivalSection = () => {
 
   return (
 
-     <div style={{display: 'flex', width: '100%' ,justifyContent: 'center', gap: '15px', padding: '15px 0', backgroundColor: '#fff'}}>
-<div style={{display: 'flex', width: '90%' ,justifyContent: 'center',gap: '15px',}}>
-<div style={{display: 'flex', width: '100%' ,justifyContent: 'center', gap: '15px', color: '#fff', padding: '20px 0'}}>
-  
-      <div style={{display: 'flex', width: '50%',flexDirection: 'column', justifyContent: 'center', alignItems: 'center', color: '#fff', backgroundColor: '#000', }}>
-
+    <div className={Styles.gen1}>
+    <div className={Styles.gen2}>
+        <div className={Styles.gen3}>
+   <div className={Styles.gen4}>
         <div style={carouselContainer}>
           <div style={{ ...carousel, transform: `translateX(-${currentIndex1 * 100}%)` }}>
             {carouselItems.map((item, index) => (
               <div key={index} style={{  minWidth: '100%', display: 'flex',justifyContent: 'center',alignItems: 'center',flexDirection: 'column',}}>
-               <div style={{display: 'flex', flexDirection: 'column', width: '50%', justifyContent: 'center', alignItems: 'center', gap: '15px', color: '#fff',}}>
+               <div className={Styles.carousel2}>
                   <img src={item.image2} alt='iPhone' style={{display: 'flex', flexDirection: 'column', width: '100%', justifyContent: 'center',}} />
                 </div>
-              <div style={rowInnerDivStyle}>
+                <div className={Styles.rowInnerDivStyle}>
              
-                  <h1 style={h1_text}>{item.hText}</h1>
-                  <div style={shop_now}>
+                  <h1 className={Styles.h1_text}>{item.hText}</h1>
+                  <div className={Styles.shop_now}>
                     <p>{item.shopNow}</p>
                   </div>
                 </div>
@@ -107,8 +104,8 @@ const ArrivalSection = () => {
           </div>
         </div>
         </div>
-      <div style={{display: 'flex', width: '50%',flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', gap: '15px', color: '#fff',}}>
-      <div style={{display: 'flex',width: '100%', justifyContent: 'center', alignItems: 'center', gap: '20px', backgroundColor: '#000'}}>
+        <div className={Styles.carousel2}>
+      <div className={Styles.carousel21}>
   
         <div style={carouselContainer}>
           <div style={{ ...carousel, transform: `translateX(-${currentIndex2 * 100}%)` }}>
@@ -116,13 +113,13 @@ const ArrivalSection = () => {
               <div key={index} style={carouselItem}>
                 <div style={rowInnerDivStyle}>
                 
-                  <h1 style={h1_text}>{item.hText}</h1>
-                  <div style={shop_now}>
+                  <h1 className={Styles.h1_text}>{item.hText}</h1>
+                  <div className={Styles.shop_now}>
                     <p>{item.shopNow}</p>
                   
                   </div>
                 </div>
-                <div style={rowInnerDivStyle}>
+                <div className={Styles.rowInnerDivStyle}>
                   <img src={item.image2} alt='iPhone' style={heroImage} />
                 </div>
               </div>
@@ -130,8 +127,8 @@ const ArrivalSection = () => {
         </div>
       </div>
 </div>
-<div style={{display: 'flex',width: '100%', justifyContent: 'flex-start', alignItems: 'flex-start', gap: '15px',}}>
-<div style={{display: 'flex', flexDirection: 'column', width: '50%', justifyContent: 'center', alignItems: 'center', gap: '15px', color: '#fff',backgroundColor: '#000'}}>
+<div className={Styles.test}>
+<div className={Styles.test2}>
 
 <div style={carouselContainer}>
           <div style={{ ...carousel, transform: `translateX(-${currentIndex3 * 100}%)` }}>
@@ -140,10 +137,10 @@ const ArrivalSection = () => {
                   <div style={{display: 'flex', flexDirection: 'column', width: '50%', justifyContent: 'center', alignItems: 'center', gap: '15px', color: '#fff',}}>
                   <img src={item.image2} alt='iPhone' style={{display: 'flex', flexDirection: 'column', width: '100%', justifyContent: 'center',}} />
                 </div>
-                <div style={rowInnerDivStyle}>
+                <div className={Styles.rowInnerDivStyle}>
            
-                  <h1 style={{fontFamily: 'Poppins',fontSize: '20px',fontWeight: '600',color: '#fff',width: '100%',}}>{item.hText}</h1>
-                  <div style={shop_now}>
+                <h1 className={Styles.hText}>{item.hText}</h1>            
+                <div className={Styles.shop_now}>
                     <p>{item.shopNow}</p>
                    
                   </div>
@@ -155,19 +152,19 @@ const ArrivalSection = () => {
         </div>
       </div>
 </div>
-<div style={{display: 'flex', flexDirection: 'column', width: '50%', justifyContent: 'center', alignItems: 'center', gap: '15px', color: '#fff', backgroundColor: '#000'}}>
+<div className={Styles.test2}>
 
         <div style={carouselContainer}>
           <div style={{ ...carousel, transform: `translateX(-${currentIndex4 * 100}%)` }}>
             {carouselItems.map((item, index) => (
-              <div key={index} style={{  minWidth: '100%',display: 'flex',justifyContent: 'center',alignItems: 'center',flexDirection: 'column',}}>
+              <div key={index} style={{  minWidth: '100%',display: 'flex',justifyContent: 'center',alignItems: 'center',flexDirection: 'column', textAlign: 'center'}}>
                   <div style={{display: 'flex', flexDirection: 'column', width: '50%', justifyContent: 'center', alignItems: 'center', gap: '15px', color: '#fff',}}>
                   <img src={item.image2} alt='iPhone' style={{display: 'flex', flexDirection: 'column', width: '100%', justifyContent: 'flex-start',}} />
                 </div>
-                <div style={rowInnerDivStyle}>
+                <div className={Styles.rowInnerDivStyle}>
            
-                  <h1 style={{fontFamily: 'Poppins',fontSize: '20px',fontWeight: '600',color: '#fff',width: '100%',}}>{item.hText}</h1>
-                  <div style={shop_now}>
+                  <h1 className={Styles.hText}>{item.hText}</h1>
+                  <div className={Styles.shop_now}>
                     <p>{item.shopNow}</p>
                    
                   </div>
@@ -221,27 +218,7 @@ const rowInnerDivStyle = {
   width: '100%'
 };
 
-const h1_text = {
-  fontFamily: 'Poppins',
-  fontSize: '30px',
-  fontWeight: '600',
-  lineHeight: '50px',
-  color: '#fff',
-  width: '100%',
 
-  
-};
-
-const shop_now = {
-  display: 'flex',
-  alignItems: 'flex-start',
-  justifyContent: 'flex-start',
-  fontFamily: 'Poppins',
-  fontSize: '15px',
-  fontWeight: '400',
-  color: '#FAFAFA',
-  gap: '15px',
-};
 
 const heroImage = {
   maxWidth: '100%',

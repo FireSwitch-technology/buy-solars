@@ -1,0 +1,254 @@
+    /* genSect1 */
+  .genSect1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* alignItems: center; */
+    width: 100%;
+    background-color: #fff;
+    padding: 0 0 0 30px;
+    color: black;
+  }
+  
+  /* genSect2 */
+  .genSect2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+  }
+  
+  /* genSect3 */
+  .genSect3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* alignItems: center; */
+    width: 100%;
+    padding: 5px 20px 0;
+    gap: 15px;
+  }
+  
+  /* todayStyle */
+  .todayStyle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    width: 80%;
+  }
+  
+  /* rectangle */
+  .rectangle {
+    background-color: #DB4444;
+    color: red;
+    border: 1px solid #DB4444;
+    padding: 18px 8px;
+    border-radius: 3px;
+  }
+  
+  /* flashStyle */
+  .flashStyle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* flashStyle1 */
+  .flashStyle1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 200px;
+  }
+  
+  /* H1_flash */
+  .H1_flash {
+    font-family: 'Inter';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 48px; /* 133.333% */
+    letter-spacing: 1.44px;
+  }
+  
+  /* timeStyle */
+  .timeStyle {
+    display: flex;
+    /* flexDirection: 'column'; */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  /* dayStyle */
+  .dayStyle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+  }
+  
+  /* dayStyle2 */
+  .dayStyle2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    font-family: 'Poppins';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+  }
+  
+  /* iconStyle */
+  .iconStyle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  /* arrowIcon */
+  .arrowIcon {
+    border-radius: 50%;
+    background-color: #F5F5F5;
+    padding: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* colonStyle */
+  .colonStyle {
+    color: #FFAD33;
+  }
+
+  /* h3Style */
+.h3Style {
+  font-size: 20px;
+}
+  
+
+  @media screen and (max-width: 768px) {
+
+    /* genSect3 */
+  .genSect3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    padding: 10px 0;
+    gap: 15px;
+  }
+      /* flashStyle */
+  .flashStyle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+  }
+  
+  /* flashStyle1 */
+  .flashStyle1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+    /* iconStyle */
+    .iconStyle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       width: 50%;
+      }
+
+      .timeStyle{
+        margin: '20px 0'
+      }
+
+  }
+
+  @media screen and (max-width: 375px) {
+    .flashStyle1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      width: 100%;
+    }
+
+    .H1_flash {
+      font-family: 'Inter';
+      font-size: 20px;
+      white-space: nowrap;
+    
+    }
+
+    .timeStyle{
+      font-size: 10px;
+      gap: 1px;
+    }
+    .dayStyle {
+    
+      gap: 10px;
+    }
+    
+    /* dayStyle2 */
+    .dayStyle2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      font-size: 10px;
+      line-height: 15px;
+    }
+
+    /* h3Style */
+.h3Style {
+  font-size: 10px;
+  gap: 5px;
+
+}
+  }
+
+  @media screen and (max-width: 225px) {
+    .flashStyle1 {
+     
+      gap: 12px;
+      width: 90%;
+    }
+
+    .timeStyle{
+      font-size: 7px;
+      gap: 1px;
+    }
+    .dayStyle {
+    
+      gap: 7px;
+    }
+    
+    /* dayStyle2 */
+    .dayStyle2 {
+     
+      gap: 20px;
+      font-size: 7px;
+      line-height: 10px;
+    }
+
+    /* h3Style */
+.h3Style {
+  font-size: 8px;
+  gap: 5px;
+
+}
+  }

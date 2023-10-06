@@ -1,7 +1,9 @@
-import Navbar from "@/components/navbar";
 import React from "react";
 import Link from "next/link";
 import FooterSect from "@/components/footer";
+import NBar from "@/components/navb";
+import AccountNav from "@/components/accountnav";
+import Styles from '@/styles/myaccount.module.css';
 
 
 const AccountPage = () => {
@@ -11,65 +13,66 @@ const AccountPage = () => {
 
     return(
         <>
-        <Navbar/>
-        <div style={{ display: 'flex', flexDirection: 'column', width: '100%', justifyContent: 'center', alignItems: 'center', padding: '10px 0', backgroundColor: '#fff' }}>
-            <div style={{ display: 'flex',flexDirection: 'column',  width: '90%', justifyContent: 'center', alignItems: 'center', padding: '10px 0' }}>
-                <div style={{ display: 'flex', flexDirection: 'column', width: '100%', justifyContent: 'center', alignItems: 'center', gap: '20px', color: '#fff', }}>
-                <div style={{ display: 'flex', width: '100%', justifyContent: 'space-between', alignItems: 'center', color: '#000', }}>
-                <div style={{display: 'flex', width: '100%' ,justifyContent: 'flex-start', alignItems: 'center', gap: '10px', color: '#000', padding: '20px 0',fontFamily: 'Poppins', fontSize: '18px' }}>
-                    <h3 style={{fontWeight: '400', fontSize: '15px'}}><Link href='/' style={links}>Home</Link></h3>
+       <div className={Styles.nBar}> <NBar/></div>
+       <div className={Styles.accountNav}> <AccountNav/></div>
+        <div className={Styles.outer}>
+        <div className={Styles.second}>
+        <div className={Styles.third}>
+        <div className={Styles.fourth}>
+        <div className={Styles.fifth}>
+                    <h3 className={Styles.fifthH3}><Link href='/' className={Styles.links}>Home</Link></h3>
                     <h3>/</h3>
-                    <h3 style={{fontWeight: '400', fontSize: '15px'}}><Link href='/cart' style={links}>My Account</Link></h3>
+                    <h3 className={Styles.fifthH3}><Link href='/cart' className={Styles.links}>My Account</Link></h3>
                  
                 </div>
-                    <h3 style={{fontWeight: '400', fontSize: '15px', display: 'flex', gap: '10px'}}>Welcome <em style={{color: '#A51717'}}>Timothy</em></h3>
+                    <h3 className={Styles.welcome}>Welcome <em style={{color: '#A51717'}}>Timothy</em></h3>
 
                  
             
                    </div>
-                   <div style={{ display: 'flex', width: '100%', justifyContent: 'flex-start', gap:'100px', color: '#000', }}>
-                   <div style={{ display: 'flex', flexDirection: 'column', width: '25%', justifyContent: 'flex-start', gap:'20px', color: '#000', padding: '25px 15px', borderRadius: '10px'}}>
-                   <div style={{ display: 'flex',flexDirection: 'column', justifyContent: 'flex-start', gap:'10px', color: '#000', }}>
-                   <h3 style={h3Style}>Manage My Account
+                   <div className={Styles.gen1}>
+                   <div className={Styles.gen2}>
+                   <div className={Styles.gen3}>
+                   <h3 className={Styles.h3Style}>Manage My Account
       </h3>
       
-        <ul style={selectStyle}>
-          <Link href='/profile' style={links}><li style={listStyle} value="profile">
+        <ul className={Styles.selectStyle}>
+          <Link href='/profile' className={Styles.links}><li className={Styles.listStyle} value="profile">
             My Profile
           </li></Link>
-          <Link href='/contact' style={links}><li style={listStyle} value="address">
+          <Link href='/contact' className={Styles.links}><li className={Styles.listStyle} value="address">
             Address Book
           </li></Link>
-         <Link href='/payment' style={links}> <li style={listStyle} value="payment">
+         <Link href='/payment' className={Styles.links}> <li className={Styles.listStyle} value="payment">
             My Payment Options
           </li></Link>
         </ul>
     
 </div>
-<div style={{ display: 'flex',flexDirection: 'column', justifyContent: 'flex-start', gap:'10px', color: '#000', }}>
-                   <h3 style={h3Style}>My Orders
+<div className={Styles.gen3}>
+        <h3 className={Styles.h3Style}>My Orders
     
       </h3>
      
-        <ul style={selectStyle}>
-          <Link href='/profile' style={links}><li style={listStyle} value="My Returns">
+        <ul className={Styles.selectStyle}>
+          <Link href='/profile' className={Styles.links}><li className={Styles.listStyle} value="My Returns">
             My Returns
           </li></Link>
-          <Link href='/contact' style={links}><li style={listStyle} value="My Cancellations">
+          <Link href='/contact' className={Styles.links}><li className={Styles.listStyle} value="My Cancellations">
             My Cancellations
           </li></Link>
       
         </ul>
 </div>
-<div style={{ display: 'flex',flexDirection: 'column', justifyContent: 'flex-start', gap:'10px', color: '#000', }}>
-                   <h3 style={h3Style}>My WishList
+<div className={Styles.gen3}>
+                   <h3 className={Styles.h3Style}>My WishList
            
       </h3>
-        <ul style={selectStyle}>
-          <Link href='/profile' style={links}><li style={listStyle} value="My Returns">
+        <ul className={Styles.selectStyle}>
+          <Link href='/profile' className={Styles.links}><li className={Styles.listStyle} value="My Returns">
             My Returns
           </li></Link>
-          <Link href='/contact' style={links}><li style={listStyle} value="My Cancellations">
+          <Link href='/contact' className={Styles.links}><li className={Styles.listStyle} value="My Cancellations">
             My Cancellations
           </li></Link>
       
@@ -77,36 +80,38 @@ const AccountPage = () => {
 </div>
 
      </div>
-     <div style={{ display: 'flex', flexDirection: 'column', width: '75%', justifyContent: 'flex-start',gap:'15px', color: 'grey', boxShadow: '0px 1px 10px 0px rgba(0, 0, 0, 0.1)', padding: '60px', borderRadius: '10px' }}>
-<h3 style={{color: 'red', font: 'Poppin 20px 500 '}}>Edit Your Profile</h3>
-<div style={{display: 'flex', width: '100%', justifyContent: 'space-between',}}>
-<div style={{display: 'flex', width:'40%', flexDirection: 'column', justifyContent: 'center',gap: '10px'}}>
-<h3 style={{fontSize: '15px'}}>First Name</h3>
-<input type="text" style={inputStyle}/>
+     <div className={Styles.gen5}>
+<h3 className={Styles.edit}>Edit Your Profile</h3>
+<div className={Styles.gen6}>
+<div className={Styles.gen7}>
+<h3 className={Styles.name}>First Name</h3>
+<input type="text" className={Styles.inputStyle}/>
 </div>
-<div style={{display: 'flex',width: '40%', flexDirection: 'column', justifyContent: 'center', gap: '10px'}}>
-<h3 style={{fontSize: '15px'}}>Last Name</h3>
-<input type="text" style={inputStyle}/>
+<div className={Styles.gen7}>
+<h3 className={Styles.name}>Last Name</h3>
+<input type="text" className={Styles.inputStyle}/>
 </div>
 </div>
-<div style={{display: 'flex', width: '100%', justifyContent: 'space-between',}}>
-<div style={{display: 'flex',width: '40%', flexDirection: 'column', justifyContent: 'flex-start',gap: '10px'}}>
-<h3 style={{fontSize: '15px'}}>Email</h3>
-<input type="text" style={inputStyle}/>
+<div className={Styles.gen6}>
+<div className={Styles.gen7}>
+<h3 className={Styles.name}>Email</h3>
+<input type="text" className={Styles.inputStyle}/>
 </div>
-<div style={{display: 'flex',width: '40%', flexDirection: 'column', justifyContent: 'flex-start', gap: '10px'}}>
-<h3 style={{fontSize: '15px'}}>Address</h3>
-<input type="text" style={inputStyle}/>
+<div className={Styles.gen7}>
+<h3 className={Styles.name}>Address</h3>
+<input type="text" className={Styles.inputStyle}/>
 </div>
 
 </div>
-<h3 style={{fontSize: '15px'}}>Password Changes</h3>
-<input type="text" style={inputStyle} placeholder="Current Passwod"/>
-<input type="text" style={inputStyle} placeholder="New Passwod"/>
-<input type="text" style={inputStyle} placeholder="Confirm New Passwod"/>
-<div style={{display: 'flex',width: '100%', justifyContent: 'space-between', alignItems: 'center', gap: '10px'}}>
+<h3 className={Styles.name}>Password Changes</h3>
+<div className={Styles.gen8}>
+<input type="text" className={Styles.inputStyle} placeholder="Current Passwod"/>
+<input type="text" className={Styles.inputStyle} placeholder="New Passwod"/>
+<input type="text" className={Styles.inputStyle} placeholder="Confirm New Passwod"/>
+<div className={Styles.cancel}>
 <p>Cancel</p>
-<button style={{backgroundColor: '#000', padding: '10px 0', width: '50%', border: 'none', borderRadius: '5px',color: '#fff', font: 'Poppins 20px 500',}}>Save Changes</button>
+<button className={Styles.buttonStyle}>Save Changes</button>
+</div>
 </div>
 </div>
                     </div>
@@ -117,22 +122,6 @@ const AccountPage = () => {
         </>
     )
 }
-
-
-const h3Style = { fontWeight: '600', fontSize: '16px', display: 'flex', justifyContent: 'space-between', width: '100%', alignItems: 'center', padding: '0 30px', color: 'grey' }
-
-const selectStyle = {
-    display: 'flex',
-    justifyContent: 'flex-start',
-    alignItems: '',
-    flexDirection: 'column',
-    gap: '10px'
-}
-const listStyle = {fontWeight: '400', fontSize: '15px', fontFamily: 'Poppins',listStyle: 'none',textDecoration: 'none',color: 'grey',paddingLeft: '50px'}
-
-const inputStyle = {padding: '12px', backgroundColor: '#F5F5F5', width: '100%',border: 'none',}
-
-const links={textDecoration: 'none', fontStyle: 'none', color: 'grey'}
 
 
 export default AccountPage;

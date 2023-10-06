@@ -1,18 +1,17 @@
 import React from "react";
-import Navbar from "./navbar";
-// import {PiAsteriskSimpleFill} from 'react-icons/pi'
 import {LuAsterisk} from 'react-icons/lu'
 import {TiDelete} from 'react-icons/ti'
 import Link from "next/link";
+import NBar from "./navb";
 
 const Checkout = () => {
     return(
         <>
-        <Navbar />
+         <NBar/>
         <div style={{ display: 'flex', flexDirection: 'column', width: '100%', justifyContent: 'center', alignItems: 'center', padding: '10px 0', backgroundColor: '#fff' }}>
             <div style={{ display: 'flex',flexDirection: 'column',  width: '90%', justifyContent: 'center', alignItems: 'center', padding: '10px 0' }}>
                 <div style={{ display: 'flex', flexDirection: 'column', width: '100%', justifyContent: 'center', alignItems: 'center', gap: '20px', color: '#fff', }}>
-                <div style={{display: 'flex', width: '100%' ,justifyContent: 'flex-start', gap: '10px', color: '#000', padding: '20px 0',fontFamily: 'Poppins', fontSize: '18px' }}>
+                <div className="hidden whitespace-wrap sm:flex w-full justify-start gap-[10px] text-black py-[20px] text-[18px] ">
                     <h3 style={{fontWeight: '400', fontSize: '15px'}}><Link href='/'>Account</Link></h3>
                     <h3>/</h3>
                     <h3 style={{fontWeight: '400', fontSize: '15px'}}><Link href='/cart'>My Account</Link></h3>
@@ -26,8 +25,8 @@ const Checkout = () => {
 
                 <h1 style={{display: 'flex', width: '100%' ,justifyContent: 'flex-start', color: '#000',fontFamily: 'Poppins', fontSize: '20px', }}>Billing Details</h1>
 
-<div style={{display: 'flex', width: '100%' ,justifyContent: 'space-between', color: '#000',fontFamily: 'Poppins', fontSize: '18px' }}>
-<div style={{display: 'flex', width: '45%', flexDirection: 'column' ,justifyContent: 'space-between', color: '#000',fontFamily: 'Poppins', fontSize: '18px' }}>
+<div className="flex lg:flex-row flex-col w-full justify-between text-black text-[18px]">
+<div className="lg:flex w-full lg:w-[45%] lg:flex-col justify-between text-black text-[18px] ">
 
 <div style={{display: 'flex',  flexDirection: 'column', width: '100%' ,justifyContent: 'space-between', color: '#000', padding: '10px 0',fontFamily: 'Poppins', fontSize: '18px' }}>
 <div style={{display: 'flex', flexDirection: 'column',  width: '100%' ,justifyContent: 'center', color: '#000',fontFamily: 'Poppins', fontSize: '18px', position: "relative" }}>
@@ -72,13 +71,13 @@ const Checkout = () => {
 </div>
 <input type="email" style={{padding: '10px', backgroundColor: '#F5F5F5', width: '100%',border: 'none'}}/>
 </div>
-<div style={{display: "flex", justifyContent: "flex-start", gap: '10px', width: '100%'}}>
+<div style={{display: "flex", justifyContent: "flex-start", alignItems: 'center', gap: '10px', width: '100%'}}>
 <input type="checkbox"/>
-<h3 style={{fontFamily: 'Poppins', fontSize: '20px',fontWeight: '400' }}>Save this information for faster check-out next time</h3>
+<h3 style={{fontFamily: 'Poppins', fontSize: '18px',fontWeight: '400' }}>Save this information for faster check-out next time</h3>
 </div>
 </div>
 
-<div style={{display: 'flex', width: '40%', flexDirection: 'column' ,justifyContent: 'flex-start', color: '#000', padding: '5px 70px 0 0',fontFamily: 'Poppins', fontSize: '18px', gap: '20px'}}>
+<div className="lg:flex lg:w-[45%] w-full flex-col justify-start text-black px-0 py-5 lg:px-5 gap-5 text-[18px]">
 <div style={{display: 'flex', width: '100%' ,justifyContent: 'space-between', alignItems: 'center', color: '#000', fontFamily: 'Poppins', fontSize: '18px',display: 'flex',padding: '10px 0',}}>
 <div style={{display: "flex", justifyContent: "flex-start", alignItems: "center", padding: 0,  gap:'10px',}}>
 <div style={{ position: "relative", width: '30%',}}>
@@ -108,12 +107,12 @@ const Checkout = () => {
 <h2 style={{ fontFamily: 'Poppins', fontSize: '15px' }}>$786</h2>
 
 </div>
-<div style={{display: "flex", justifyContent: "space-between", color: '#000', }}>
-<div style={{display: "flex", justifyContent: "flex-start", alignItems: 'center', color: '#000', width: '40%', gap: '10px' }}>
+<div className="flex flex-col lg:flex-row justify-start text-black gap-2">
+<div className="flex justify-start items-center text-black lg:w-[40%] gap-[10px]">
 <input type="radio" />
-<h5>Bank</h5>
+<h5 className="whitespace-nowrap text-[16px]">Bank</h5>
     </div>
-    <div style={{display: "flex", justifyContent: "center", alignItems: 'center',gap: '5px' }}>
+    <div className="flex w-full lg:justify-between lg:items-center gap-3 lg:gap-1">
 <img src="/images/image 32.png" alt="" />
 <img src="/images/image 31.png" alt="" />
 <img src="/images/image 30.png" alt="" />
@@ -121,15 +120,15 @@ const Checkout = () => {
 
     </div>
 </div>
-<div style={{display: "flex", justifyContent: "flex-start", alignItems: 'center', color: '#000', width: '40%', gap: '10px' }}>
+<div className="flex justify-start items-center text-black w-[40%] gap-[10px] lg:m-0 my-3">
 <input type="radio" />
-<h5>Cash on delivery</h5>
+<h5 className="whitespace-nowrap text-[16px]">Cash on delivery</h5>
     </div>
-    <div style={{display: "flex", justifyContent: 'space-between', alignItems: 'flex-start',color: '#000', fontFamily: 'Poppins', fontSize: '18px', gap: '10px' }}>
-<input type="text" style={{display: 'flex',  width:'60%', justifyContent: 'center', alignItems: 'center', border: '1px solid black',padding: '10px', backgroundColor: '#fff', color:'#000' }} placeholder="Coupon Code"/>
-<button style={{padding: '10px 30px', border: 'none', borderRadius: '5px', backgroundColor: '#000', color: '#fff'}}>Apply Coupon</button>
+    <div className="flex flex-col sm:flex-row justify-between items-start text-black text-[18px] gap-[10px] " >
+<input type="text" className="flex w-full sm:w-[50%] justify-center items-center border border-solid p-[10px] bg-white text-black" placeholder="Coupon Code"/>
+<button className="w-full sm:w-[45%] py-[10px] px-[30px] border-none border rounded-sm bg-black text-white">Apply Coupon</button>
 </div>
-<button style={{padding: '10px 30px', border: 'none', borderRadius: '5px', backgroundColor: '#000', color: '#fff', width: '100%'}}>Place Order</button>
+<button className="py-[10px] px-[30px] border-none rounded-sm bg-black text-white w-full lg:m-0 my-3">Place Order</button>
 
 </div>
                 </div>

@@ -1,0 +1,328 @@
+.gen1{ 
+    display: flex;
+     flex-direction: column;
+      width: 100%;
+      justify-content: center;
+       align-items: center;
+        background-color: white;
+        padding: '30px'
+     }
+
+     .gen2{ 
+        display: flex;
+         flex-direction: column;
+          width: 90%;
+          justify-content: center;
+           align-items: center;
+         }
+
+         .gen3{ 
+            display: flex;
+             flex-direction: column;
+              width: 100%;
+              justify-content: center;
+               align-items: center;
+               margin-bottom: 20px;
+             }
+
+        .gen4{
+            display: flex;
+             width: 100%;
+             justify-content: space-between;
+              align-items: center;
+              background-color: black;
+              padding: 30px;
+              gap: 20px;
+        }
+
+        .gen5{
+            display: flex;
+            flex-direction: column;
+             width: 100%;
+             justify-content: flex-start;
+              align-items: flex-start;
+              gap: 20px;
+              padding: 20px;
+        }
+
+    .h1Style{
+        width: 60%;
+        font-family: Poppins;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 600;
+         line-height: 50px;
+        color: white
+    }
+
+    .buyBtn{
+        color: white;
+        font-family: Poppins;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        background-color: #00FF66;
+        padding: 10px 30px;
+        border:none;
+        border-radius:5px;
+    }
+
+
+    /* styles.module.css */
+.gen6 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+  }
+  
+  .circleStyle {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins';
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+    width: 15%;
+    padding: 10px;
+  }
+  
+  .circleTextStyle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    width: auto;
+  }
+ 
+
+  
+  /* Add more media queries for other breakpoints as needed */
+
+  
+  @media (max-width: 1200px) {
+    .circleStyle {
+      width: 15%;
+      
+    }
+    .circleTextStyle {
+    
+      font-size: 12px;
+     
+    }
+  }
+  
+  
+  @media (max-width: 900px) {
+    .circleStyle {
+      width: 18%;
+    }
+
+    .h1Style{
+      width: 100%;
+    
+  }
+  }
+
+@media screen and (max-width: 768px) {
+
+
+    .gen3{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .gen4{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+         justify-content: center;
+      padding: 10px;
+    }
+
+    .gen5{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .gen6 {
+      display: flex;
+      justify-content: center;
+    
+      
+    }
+
+
+    .h1Style{
+        width: 100%;
+        font-family: Poppins;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 500;
+         line-height: 50px;
+        color: white
+    }
+
+    .buyBtn{
+    white-space: nowrap;
+   
+    }
+
+    .circleStyle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+        width: 15%;
+      }
+}
+
+@media screen and (max-width: 600px) {
+    
+
+    .gen4{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+         justify-content: center;
+      padding: 10px;
+    }
+
+    .gen5{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+
+    .circleStyle {
+      
+        width: 20%;
+      }
+
+    .h1Style{
+        width: 100%;
+        font-size: 40px;
+         line-height: 50px;
+        
+    }
+
+    .buyBtn{
+    white-space: nowrap;
+   
+    }
+}
+
+@media screen and (max-width: 500px) {
+    
+
+    .gen4{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+         justify-content: center;
+      padding: 10px;
+    }
+
+    .gen5{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .buyBtn{
+    white-space: nowrap;
+   
+    }
+
+   
+}
+
+ /* Media queries for responsiveness */
+ @media (max-width: 480px) {
+    .circleStyle {
+      width: 20%; /* Adjust the width for smaller screens */
+
+    }
+    .circleTextStyle {
+    
+      font-size: 15px;
+     
+    }
+  }
+  
+
+@media screen and (max-width: 425px) {
+ 
+
+    .h1Style{
+      
+        font-size: 30px;
+      
+    }
+}
+
+ /* Media queries for responsiveness */
+ @media (max-width: 400px) {
+    .circleStyle {
+      width: 35%; /* Adjust the width for smaller screens */
+    }
+
+    .circleTextStyle {
+    
+      font-size: 12px;
+     
+    }
+  }
+ 
+
+@media screen and (max-width: 360px) {
+    .circleStyle {
+        width: 28%; /* Adjust the width for smaller screens */
+      }
+      .gen6 {
+        display: flex;
+        flex-wrap: wrap;
+      flex-direction: column;
+      }
+
+    .h1Style{
+      
+        font-size: 30px;
+      
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .circleStyle {
+        width: 40%; /* Adjust the width for smaller screens */
+      }
+
+    .h1Style{
+      
+        font-size: 30px;
+    }
+   
+}
+
+@media screen and (max-width: 200px) {
+    .circleStyle {
+        width: 60%; /* Adjust the width for smaller screens */
+      }
+
+    .h1Style{
+      
+        font-size: 30px;
+    }
+   
+}
+
+

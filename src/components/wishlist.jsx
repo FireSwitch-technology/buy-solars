@@ -1,7 +1,7 @@
 import React from "react"
-import Navbar from '../components/navbar'
 import {AiOutlineShoppingCart, AiTwotoneDelete, AiTwotoneStar, AiOutlineEye} from 'react-icons/ai'
 import FooterSect from "./footer"
+import NBar from "./navb"
 
 const WishList = () => {
     const wishItems = [
@@ -118,7 +118,7 @@ const WishList = () => {
     ]
     return(
    <>
-        <Navbar/>
+        <NBar/>
         <div style={{ display: 'flex', flexDirection: 'column', width: '100%', justifyContent: 'center', alignItems: 'center', backgroundColor: '#fff',  }}>
   <div style={{ display: 'flex', flexDirection: 'column', width: '90%', justifyContent: 'center', alignItems: 'center' }}>
     <div style={{ display: 'flex', flexDirection: 'column', width: '100%', justifyContent: 'center', alignItems: 'center', gap: '20px', padding: '25px 0' }}>
@@ -159,7 +159,7 @@ const WishList = () => {
 
 {/* Second Section Starts Here*/}
 
-      <div style={{ display: 'flex', width: '100%', justifyContent: 'space-between', alignItems: 'center', gap: '20px', color: '#000', padding: '15px' }}>
+      <div style={{ display: 'flex', width: '100%', justifyContent: 'space-between', alignItems: 'center', gap: '20px', color: '#000', padding: '15px 0' }}>
       <div style={{display: "flex", gap: '5px', justifyContent: 'center', alignItems: 'flex-end'}}>
       <div style={rectangle}></div>
         <h2 style={{fontFamily: 'Poppins', fontSize: '18px'}}>Just For You</h2>
@@ -178,7 +178,7 @@ const WishList = () => {
               <div style={{ color: '#000' }}>{product.deleteIcon}</div>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '15px'}}>
-                 <div style={{width: '100%', height: '10rem', overflow: 'hidden', display: "flex", justifyContent: 'center', alignItems: 'center'}}> <img style={{width: '100%'}} src={product.image} alt="Gucci-Hand-Bag"  /></div>
+                 <div style={{width: '90%', height: '10rem', overflow: 'hidden', display: "flex", flex: 'wrap', justifyContent: 'center', alignItems: 'center'}}> <img style={{width: '100%'}} src={product.image} alt="Gucci-Hand-Bag"  /></div>
                   <button style={{ display: "flex",  backgroundColor: '#000', width: '100%', justifyContent: "center", alignItems: "center", padding: '10px 0', border: 'none', gap: '10px', fontSize: '20px' }}>
                  <div style={{color: 'white'}}> {product.cartIcon}</div>
                       <h5 style={{ color: '#fff', fontFamily: 'Poppins', fontSize: '12px', fontWeight: 400 }}>Add To Cart</h5>
@@ -204,11 +204,10 @@ const WishList = () => {
 ))}
 
       </div>
-      <FooterSect/>
     </div>
   </div>
 </div>
-
+<FooterSect/>
    </>
 
     )

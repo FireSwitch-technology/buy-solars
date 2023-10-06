@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Styles from '@/styles/mycategory.module.css'
 
 const CategorySection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -31,33 +32,34 @@ const CategorySection = () => {
 
 
   return (
-    <section style={{ display: 'flex', width: '100%' ,justifyContent: 'center', alignItems: 'center', borderRadius: '' , backgroundColor: 'white', padding: '30px'}}>
-    <div style={{ display: 'flex', width: '90%' ,justifyContent: 'center', alignItems: 'center', borderRadius: '' }}>
-        <div style={{ display: 'flex', width: '100%' ,justifyContent: 'center', alignItems: 'center', borderRadius: '' }}>
-   <div style={{display: 'flex',  width: '100%' ,justifyContent: 'space-around', alignItems: 'center', backgroundColor: 'black', padding: '30px', gap: '20px',}}>
-<div style={{display: 'flex', flexDirection: 'column',width: '100%' ,justifyContent: 'flex-start', alignItems: 'flex-start', padding: '30px', gap: '20px'}}>
+    <section className={Styles.gen1}>
+    <div className={Styles.gen2}>
+        <div className={Styles.gen3}>
+   <div className={Styles.gen4}>
+<div className={Styles.gen5}>
 <h6 style={{fontFamily: 'Poppins', fontSize: '15px', fontStyle: 'normal', fontweight: 600, lineHeight: '20px', color: '#00FF66'}}>Categories</h6>
-<h1 style={{width: '60%', fontFamily: 'Poppins', fontSize: '40px', fontStyle: 'normal', fontweight: 600, lineHeight: '50px', color: 'white'}}>Enhance Your Light Experience</h1>
+<h1 className={Styles.h1Style}>Enhance Your Light Experience</h1>
   
-   <div style={{display: 'flex', width: '100%', justifyContent: 'flex-start', alignItems: 'center', gap: '10px' }}>
-   <div style={circleStyle}>
-   <h6 style={circleTextStyle}>23</h6>
-<h6 style={circleTextStyle}>Seconds</h6>
+   <div className={Styles.gen6}>
+   <div className={Styles.circleStyle}>
+<h6 className={Styles.circleTextStyle}>23</h6>
+<h6 className={Styles.circleTextStyle}>Seconds</h6>
 </div>
-<div style={circleStyle}>
-<h6 style={circleTextStyle}>23</h6>
-<h6 style={circleTextStyle}>Seconds</h6>
+<div className={Styles.circleStyle}>
+<h6 className={Styles.circleTextStyle}>23</h6>
+<h6 className={Styles.circleTextStyle}>Minute</h6>
 </div>
-<div style={circleStyle}>
-<h6 style={circleTextStyle}>23</h6>
-<h6 style={circleTextStyle}>Seconds</h6>
+
+<div className={Styles.circleStyle}>
+<h6 className={Styles.circleTextStyle}>23</h6>
+<h6 className={Styles.circleTextStyle}>Hours</h6>
 </div>
-<div style={circleStyle}>
-<h6 style={circleTextStyle}>23</h6>
-<h6 style={circleTextStyle}>Seconds</h6>
+<div className={Styles.circleStyle}>
+<h6 className={Styles.circleTextStyle}>23</h6>
+<h6 className={Styles.circleTextStyle}>Day</h6>
 </div>
    </div>
-   <button style={{color: 'white', fontFamily: 'Poppins', fontSize: '20px', fontStyle: 'normal', fontweight: 600, backgroundColor: '#00FF66', padding: '10px 30px', border:'none', borderRadius:'5px',}}>Buy Now</button>
+   <button className={Styles.buyBtn}>Buy Now</button>
    
 </div>
    <div style={rightDivStyle}>
@@ -81,8 +83,6 @@ const CategorySection = () => {
 
   );
 };
-  const circleTextStyle ={display:'flex', justifyContent: 'center', alignItems: 'center', fontSize: '15px',}
- const circleStyle={display: 'flex', width: '13%', flexDirection: 'column' ,fontFamily: 'Poppins', borderRadius: '50%', backgroundColor: 'white', color: 'black', border:'2px solid white', padding: '10px'}
   
   const carouselContainer = {
     width: '100%',

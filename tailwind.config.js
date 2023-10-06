@@ -13,6 +13,18 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
+    screens:{
+          xxs: '250px',
+          xs: '350px',
+          sm: '480px',
+          md: '768px',
+          lg: '976px',
+          xl: '1200px'
+    },
+    gridTemplateColumns: {
+      sidebar: "300px auto", //for sidebar layout
+      "sidebar-collapsed": "64px auto", //for collapsed sidebar layout
+    },
   },
   plugins: [],
 }

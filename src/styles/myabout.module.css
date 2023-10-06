@@ -1,0 +1,297 @@
+/* styles.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    padding: 0;
+    background-color: #fff;
+  }
+  
+  .innerContainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+
+  .container1 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 30px 0;
+    background-color: #fff;
+  }
+  .innerContainer1 {
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  
+  .contentContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .linkContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+    padding-left: 50px;
+  }
+  
+  .linkColumn {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    justify-content: flex-start;
+    gap: 20px;
+    color: grey;
+  }
+  
+  .linkRow {
+    color: grey;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    padding-left: 50px;
+  }
+  
+  .linkRow2{
+    color: grey;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    text-justify: justify;
+  }
+  .headerStyle {
+    font-weight: 400;
+    font-size: 15px;
+  }
+  
+  .poppinsFont {
+    font-family: 'Poppins';
+    font-size: 18px;
+  }
+  
+  .paragraphStyle {
+    font-size: 20px;
+    width: 100%;
+  }
+  
+  .imageStyle {
+    width:50%;
+    height:max-content;
+    object-fit: cover;
+    padding-bottom: 10px;
+    overflow-x: visible;
+    
+  }
+  
+  .imageFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+  }
+  
+  .partnerColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #000;
+    padding: 20px 0;
+    gap: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    
+  }
+
+  .wraps{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .imageContainer {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .imageStyle2 {
+    /* Define your image styles here */
+    width: 100%;
+    background-color: #F5F5F5;
+    padding: 10px 20px 0px 20px;
+    border: none;
+     border-radius: 10px;
+
+}
+  
+  .partnerDetails {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+  }
+  
+  .partnerName {
+    font-size: 18px;
+    font-family: 'Poppins';
+  }
+  
+  .partnerPost {
+    font-size: 18px;
+    font-family: 'Poppins';
+  }
+  
+  .partnerLinks {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .partnerLink {
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 400;
+    list-style: none;
+  }
+  
+  .links {
+    text-decoration: none;
+    font-style: none;
+    color: #000;
+  }
+  
+
+  @media screen and (min-width: 1200px) {
+    .partnerColumn {
+          min-height: auto;
+        }
+        .imageContainer {
+            padding: 0 30px;
+          }
+  }
+  @media screen and (min-width: 770px) {
+    .imageFlex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    gap: 20px;
+      }
+  }
+  @media screen and (max-width: 768px) {
+    .linkContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding-left: 50px;
+      }
+
+      .imageStyle {
+        width:100%;
+        
+      }
+
+      .innerContainer {
+        width: 90%;
+      }
+
+      .contentContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+      }
+
+      .imageFlex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    gap: 20px;
+      }
+  }
+
+  @media screen and (max-width: 600px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        
+      }
+    .imageFlex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    gap: 20px;
+      }
+
+      .linkRow {
+    
+        padding-left: 20px;
+      }
+
+      .linkContainer, .linkContainer1 {
+        padding-left: 0px;
+        text-align: center;
+      }
+
+      .paragraphStyle {
+        font-size: 15px;
+        width: 100%;
+      }
+      .wraps{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .linkRow2{
+        display: flex;
+        align-items: center;
+      }
+      .story{
+        font-size: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .partnerColumn {
+      width: 100%;
+        
+      }
+  }
+
+ 

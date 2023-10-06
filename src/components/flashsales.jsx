@@ -1,57 +1,58 @@
 import React from "react";
 import {BsArrowRightShort, BsArrowLeftShort} from 'react-icons/bs'
+import Styles from '@/styles/myflash.module.css'
 
 
 const SectionTwo = () => {
     return(
         <>
-<div style={genSect1}>
-<div style={genSect2}>
-<div style={genSect3}>
-<div style={todayStyle}>
-    <div style={rectangle}></div>
+<div className={Styles.genSect1}>
+<div className={Styles.genSect2}>
+<div className={Styles.genSect3}>
+<div className={Styles.todayStyle}>
+    <div className={Styles.rectangle}></div>
     <h3>Today's</h3>
     </div>
-    <div style={flashStyle}>
-<div style={flashStyle1}>
-<h1 style={H1_flash}>Flash Sales</h1>
-<div style={timeStyle}>
-<div style={dayStyle}>
-<h3 style={h3Style}>Days</h3>
-<div style={dayStyle2}>
+    <div className={Styles.flashStyle}>
+<div className={Styles.flashStyle1}>
+<h1 className={Styles.H1_flash}>Flash Sales</h1>
+<div className={Styles.timeStyle}>
+<div className={Styles.dayStyle}>
+<h3 className={Styles.h3Style}>Days</h3>
+<div className={Styles.dayStyle2}>
 <h2>03</h2>
-<h2 style={colonStyle}>:</h2>
+<h2 className={Styles.colonStyle}>:</h2>
 </div>
 </div>
-<div style={dayStyle}>
-<h3 style={h3Style}>Hours</h3>
-<div style={dayStyle2}>
+<div className={Styles.dayStyle}>
+<h3 className={Styles.h3Style}>Hours</h3>
+<div className={Styles.dayStyle2}>
 <h2>03</h2>
-<h2 style={colonStyle}>:</h2>
+<h2 className={Styles.colonStyle}>:</h2>
 </div>
 </div>
-<div style={dayStyle}>
-<h3 style={h3Style}>Minutes</h3>
-<div style={dayStyle2}>
+<div className={Styles.dayStyle}>
+<h3 className={Styles.h3Style}>Minutes</h3>
+<div className={Styles.dayStyle2}>
 <h2>03</h2>
-<h2 style={colonStyle}>:</h2>
+<h2 className={Styles.colonStyle}>:</h2>
 </div>
 </div>
-<div style={dayStyle}>
-<h3 style={h3Style}>Seconds</h3>
-<div style={dayStyle2}>
+<div className={Styles.dayStyle}>
+<h3 className={Styles.h3Style}>Seconds</h3>
+<div className={Styles.dayStyle2}>
 <h2>03</h2>
-<h2 style={colonStyle}></h2>
+<h2 className={Styles.colonStyle}></h2>
 
 </div>
 </div>
 </div>
 </div>
-<div style={iconStyle}>
-    <div style={arrowIcon}><BsArrowLeftShort/></div>
-    <div style={arrowIcon}><BsArrowRightShort/></div>
+{/* <div className={Styles.iconStyle}>
+    <div className={Styles.arrowIcon}><BsArrowLeftShort/></div>
+    <div className={Styles.arrowIcon}><BsArrowRightShort/></div>
 
-</div>
+</div> */}
     </div>
 
    </div>    

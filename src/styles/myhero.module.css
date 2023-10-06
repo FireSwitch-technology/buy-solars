@@ -1,0 +1,301 @@
+/* carouselContainer */
+
+.gen1{ 
+  display: flex;
+   /* flex-direction: column; */
+    width: 100%;
+    justify-content: center;
+     align-items: center;
+      background-color: white;
+      padding: '15px 0';
+      gap: 15px
+   }
+
+   .gen2{ 
+      display: flex;
+        width: 90%;
+        justify-content: center;
+         align-items: center;
+         gap: 15px;
+       }
+
+       .gen3{ 
+          display: flex;
+           width: 100%;
+            justify-content: center;
+             gap: 15px;
+             padding: 20px 0;
+           }
+.carouselContainer {
+    width: 80%;
+    overflow: hidden;
+  }
+  
+  /* carousel */
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* carouselItem */
+  .carouselItem {
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between; 
+     align-items: center;
+  }
+  
+  /* heroSectionStyle */
+  .heroSectionStyle {
+    background-color: #fff;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); */
+    width: 100%;
+    gap: 30px;
+  }
+
+    /* leftDivStyle */
+    .leftDivStyle {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      /* width: 40%; */
+      background-color: white;
+      gap: 10px;
+      overflow: hidden;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .leftDivStyle::-webkit-scrollbar{
+      display: none;
+    }
+
+      /* columnListStyle */
+  .columnListStyle {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    gap: 10px;
+    white-space: nowrap;
+  }
+  
+  /* clickableItemStyle */
+  .clickableItemStyle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+    gap: 15px;
+    font-size: 20px;
+    border-right: 1px solid #ccc;
+    width: 100%;
+    border: 1px solid white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    position: relative;
+  }
+  
+
+  .clickableItemStyle:hover::before {
+    width: 100%; /* Expand the background overlay on hover */
+  }
+  
+.clickableItemStyle:hover {
+  background-color: #db7413; /* Change the background color on hover */
+  box-shadow: 0px 4px 8px rgba(182, 189, 196, 0.3); /* Add a subtle box-shadow on hover */
+  
+}
+
+  
+  /* rightDivStyle */
+  .rightDivStyle {
+    background-image: url('/images/buysolar.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    box-shadow: 5px 2px 4px #fff;
+    border-radius: 20px;
+    padding: 25px;
+  }
+  
+  /* rowDivStyle */
+  .rowDivStyle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 5% 10px;
+  }
+  
+  /* rowInnerDivStyle */
+  .rowInnerDivStyle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    color: white;
+    padding: 25px;
+    width: 50%;
+  }
+  
+  /* apple */
+  .apple {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  /* appleLogo */
+  .appleLogo {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  /* p_text */
+  .p_text {
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 400;
+    color: #FAFAFA;
+    line-height: 20px;
+  }
+  
+  /* h1_text */
+  .h1_text {
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 30px;
+    color: #fff;
+    width: 100%;
+  }
+  
+  /* shop_now */
+  .shop_now {
+    display: flex;
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 400;
+    color: #FAFAFA;
+    gap: 15px;
+    text-decoration: line;
+  }
+  
+  /* heroImage */
+  .heroImage {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+  @media screen and (max-Width: 900px) {
+
+    .h1_text {
+      font-family: Poppins;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 35px;
+      color: #fff;
+      width: 100%;
+    }
+
+    /* rowInnerDivStyle */
+  .rowInnerDivStyle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    color: white;
+    padding: 0;
+    width: 100%;
+  }
+  }
+
+
+  @media screen and (max-Width: 768px) {
+/* carouselContainer */
+.carouselContainer {
+  width: 100%;
+  overflow: hidden;
+}
+
+    .heroSectionStyle{
+      display: flex;
+      flex-direction: column;
+    }
+    .leftDivStyle{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+    }
+
+    .columnListStyle {
+      display: flex;
+      flex-direction: row;
+   flex-wrap: wrap;
+    }
+    .rightDivStyle{
+      width: auto;
+    }
+
+    .heroImage {
+      width: 100%;
+  
+    }
+
+    .h1_text {
+      font-family: Poppins;
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 40px;
+      color: #fff;
+      width: 100%;
+    }
+    .carouselItem {
+      width: 100%;
+      display: flex;
+    flex-direction: column;
+      justify-content: center; 
+       align-items: center;
+    }
+    .rowInnerDivStyle {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+     gap: 10px;
+     text-align: center;
+     font-size: 30px;
+     padding: 0;
+     line-height: 20px;
+
+    }
+
+    .clickableItemStyle {
+  
+      padding: 10px;
+      gap: 12;
+      font-size: 15px;
+  
+     
+    }
+  }
+
+
+
+  
+
+  

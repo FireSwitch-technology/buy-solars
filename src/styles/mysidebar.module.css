@@ -1,0 +1,69 @@
+/* Sidebar.css (or use a CSS module) */
+
+/* Menu Button */
+.stickyButton {
+  /* Add styles for larger screens (greater than 768px) */
+  @media (max-width: 768px) {
+    position: sticky;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    color: #000;
+    outline: none;
+  }
+}
+
+.menuIcon {
+  /* Add styles for larger screens (greater than 768px) */
+  @media (max-width: 768px) {
+    position: relative;
+    background: #3438ad;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    border: none;
+    width: 100%;
+  }
+}
+
+.innerCircle {
+  /* Add styles for larger screens (greater than 768px) */
+  @media (max-width: 768px) {
+    background: #fff;
+    border-radius: 30px;
+    border: 1px solid grey;
+    padding: 5px;
+    font-size: 10px;
+  }
+}
+
+/* Menu Container */
+.menuContainer {
+  /* Add styles for larger screens (greater than 768px) */
+  @media (max-width: 768px) {
+  
+    background-color: #fff;
+    padding:0px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    border: none;
+
+  }
+}
+
+/* Add styles for the cancel icon (HiX) if needed */
+/* Cancel Icon Styling */
+.stickyButton .hi-x {
+  /* Define styles for the HiX icon */
+  font-size: 20px; /* Adjust the size as needed */
+  color: red; /* Change the color to your preference */
+  /* Add any other styles you want for the icon */
+}

@@ -1,0 +1,255 @@
+.gen1{ 
+    display: flex;
+     flex-direction: column;
+      width: 100%;
+      justify-content: center;
+       align-items: center;
+        background-color: white;
+     }
+
+     .gen2{ 
+        display: flex;
+         flex-direction: column;
+          width: 90%;
+          justify-content: center;
+           align-items: center;
+         }
+
+         .gen3{ 
+            display: flex;
+             flex-direction: column;
+              width: 100%;
+              justify-content: center;
+               align-items: center;
+             }
+
+             .topBox{
+              display: flex; 
+              width: 100%;
+              justify-content: flex-start;
+               align-items: center;
+                gap: 12px;
+                padding: 20px 0;
+              }
+      
+      .box{
+          background-color: #DB4444;
+           padding: 18px 9px;
+            border-radius: 3px;
+          }
+/* productContainerStyle */
+.productContainerStyle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .productContainer{ 
+    display: flex;
+    width: 100% ;
+    justify-content: center; 
+    align-items:center; 
+    gap: 0px;
+}
+
+  .actualPrice{
+     margin-left: 10px;
+      text-decoration: line-through;
+     }
+  
+  /* productImageStyle */
+  .productImageStyle {
+    width: 100%;
+  }
+  
+.productsArray{ 
+    display: flex;
+     width: 100%; 
+     justify-content: center;
+      align-items: center;
+       background-color: white; 
+       border-radius: 20px; 
+    gap: 20px; 
+}
+
+.rateIcon{ 
+    margin-left: 5px;
+     color: #FFAD33;
+      background-color: white;
+       border-radius: 50%
+     }
+
+     .rateCount{
+         margin-left: 5px; 
+         color: black;
+         }
+
+  .productImg{
+    display: flex;
+    flex-direction: column;
+     justify-content: center;
+    position: relative;
+}
+
+  /* iconContainerStyle */
+  .iconContainerStyle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 30px;
+    left: 100px;
+    z-index: 1;
+  }
+
+  .viewBtn{
+    color: #fff;
+     background-color: #000;
+      font-size: 10px;
+       padding: 10px 22px;
+     border: none;
+      border-radius: 5px 
+    }
+  
+    .bestSell{
+        color: #000; 
+        width: 60%; 
+        font-family: Inter;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+     }
+
+     .bestCont{
+        display: flex;
+         width: 100%;
+        justify-content: space-between; 
+        align-items: center;
+         gap: 15px;
+          padding-top: 10px;
+        }
+
+  /* btnStyle */
+  .btnStyle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 80px;
+    left: 30px;
+    width: 15%;
+    background-color: #DB4444;
+    border: 1px solid #DB4444;
+    border-radius: 5px;
+  }
+  
+  /* favouriteIconStyle */
+  .favouriteIconStyle {
+    color: black;
+  }
+  
+  /* viewIconStyle */
+  .viewIconStyle {
+    color: black;
+  }
+  
+  /* productDetailsStyle */
+  .productDetailsStyle {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: black;
+    width: 70%;
+    padding: 10px;
+    gap: 5px;
+  }
+  
+  /* productPriceStyle */
+  .productPriceStyle {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+  }
+  
+  /* rateContainerStyle */
+  .rateContainerStyle {
+    display: flex;
+    align-items: center;
+    color: #FFAD33;
+  }
+  
+.month{
+    color: #DB4444;
+     font-size: 12px;
+      font-weight: 200
+    }
+
+   
+
+
+
+@media screen and (max-width: 768px) {
+
+    /* genSect3 */
+  .gen3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    /* padding: 10px 0; */
+    gap: 15px;
+  }
+      /* flashStyle */
+  .bestCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  /* flashStyle1 */
+  .bestSell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+    /* iconStyle */
+    .iconStyle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       width: 50%;
+      }
+
+      .timeStyle{
+        margin: '20px 0'
+      }
+
+  }
+
+
+  @media screen and (max-width: 375px) {
+    .bestSell{
+      color: #000; 
+      width: 100%; 
+      font-size: 20px;
+    
+   }
+  }
+
+  @media screen and (max-width: 200px) {
+    .bestSell{
+      color: #000; 
+      width: 100%; 
+      font-size: 18px;
+    
+   }
+  }

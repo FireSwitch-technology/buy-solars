@@ -1,0 +1,85 @@
+/* styles.module.css */
+.flexContainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flexContainerInner {
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flexItems {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  .flexColumn {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    color: #000;
+  }
+  
+  .iconLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 20px;
+    border-radius: 50%;
+    border: 8px solid grey;
+    background-color: black;
+  }
+  
+  .textH1 {
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .textP {
+    font-family: 'Poppins';
+    font-size: 15px;
+    font-weight: 400;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .flexItems {
+      flex-direction: column;
+    }
+  
+    .flexColumn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .flexContainerInner {
+      width: 100%;
+    }
+  
+    .flexItems {
+      flex-direction: column;
+    }
+  
+    .flexColumn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  

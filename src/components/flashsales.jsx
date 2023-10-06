@@ -1,9 +1,44 @@
-import React from "react";
-import {BsArrowRightShort, BsArrowLeftShort} from 'react-icons/bs'
+import React, {useState, useEffect} from "react";
 import Styles from '@/styles/myflash.module.css'
 
 
 const SectionTwo = () => {
+    const initialTimeRemaining = {
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0
+    }
+    const [timeRemaining, setTimeRemaining] = useState(initialTimeRemaining)
+    const targetTime = new Date(2023, 10, 1, 0 , 0 ,0)
+
+    const handleTimeChange = () => {
+        setInterval( () => {
+            const currentTime = new Date()
+            const timeDiff = targetTime > currentTime ? targetTime - currentTime : 0
+            const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24))  
+            const afterdays = timeDiff % (1000 * 60 * 60 * 24)
+
+            const hours = Math.floor(afterdays / (1000 * 60 * 60))
+            let afterhours = afterdays % (1000 * 60 * 60)
+
+            const minutes = Math.floor(afterhours / 60000)
+            let afterminutes = afterhours % 60000
+            const seconds = Math.floor(afterminutes/1000)
+
+            setTimeRemaining( (prevVal) => ({
+                ...prevVal,
+                days,
+                hours,
+                minutes,
+                seconds
+            }) )
+        }, 1000 )
+    }
+    useEffect( () => {
+        handleTimeChange()
+    }, [] )
+
     return(
         <>
 <div className={Styles.genSect1}>
@@ -20,28 +55,28 @@ const SectionTwo = () => {
 <div className={Styles.dayStyle}>
 <h3 className={Styles.h3Style}>Days</h3>
 <div className={Styles.dayStyle2}>
-<h2>03</h2>
-<h2 className={Styles.colonStyle}>:</h2>
+<h2>{timeRemaining.days}</h2>
+<h2 className={Styles.colonStyle}>: </h2>
 </div>
 </div>
 <div className={Styles.dayStyle}>
 <h3 className={Styles.h3Style}>Hours</h3>
 <div className={Styles.dayStyle2}>
-<h2>03</h2>
-<h2 className={Styles.colonStyle}>:</h2>
+<h2>{timeRemaining.hours}</h2>
+<h2 className={Styles.colonStyle}>: </h2>
 </div>
 </div>
 <div className={Styles.dayStyle}>
 <h3 className={Styles.h3Style}>Minutes</h3>
 <div className={Styles.dayStyle2}>
-<h2>03</h2>
-<h2 className={Styles.colonStyle}>:</h2>
+<h2>{timeRemaining.minutes}</h2>
+<h2 className={Styles.colonStyle}>: </h2>
 </div>
 </div>
 <div className={Styles.dayStyle}>
 <h3 className={Styles.h3Style}>Seconds</h3>
 <div className={Styles.dayStyle2}>
-<h2>03</h2>
+<h2>{timeRemaining.seconds}</h2>
 <h2 className={Styles.colonStyle}></h2>
 
 </div>
@@ -62,135 +97,6 @@ const SectionTwo = () => {
         </>
     )
 }
-
-
-const h3Style = {fontSize: '20px'}
-
-const genSect1 = {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    // alignItems: 'center',
-    width: '100%',    
-    backgroundColor: '#fff',
-    padding: '0 0 0 30px',
-    color: 'black'
-
-}
-
-const genSect2 = {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '90%',    
-}
-const genSect3 = {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    // alignItems: 'center',
-    width: '100%',   
-    padding: '5px 20px 0', 
-    gap: '15px',
-
-}
-
-const todayStyle = {
-display: 'flex',
-flexDirection: 'row',
-alignItems: 'center',
-gap: '15px',
-width: '80%'
-}
-
-const rectangle ={
-    backgroundColor: '#DB4444', 
-    color: 'red',
-    border: '1px solid #DB4444 ',
-    padding: '18px 8px',
-    borderRadius: '3px'
-}
-
-const flashStyle ={
-display: 'flex',
-justifyContent: 'space-between',
-alignItems: 'center',
-width: '100%',
-}
-
-const flashStyle1 ={
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    gap: '200px'
-
-    }
-
-
-
-const H1_flash = {
-    fontFamily: 'Inter',
-fontSize: '30px',
-fontStyle: 'normal',
-fontWeight: '600',
-lineHeight: '48px', /* 133.333% */
-letterSpacing: '1.44px', 
-}
-
- const timeStyle ={
-    display: 'flex',
-    // flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    gap: '20px'
- }
-
- const dayStyle = {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    gap: '12px',
-    
- }
-
- const dayStyle2 = {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-   gap: '35px',
-   fontFamily: 'Poppins',
-    fontSize: '12px',
-    fontStyle: 'normal',
-    fontWeight: '500',
-    lineHeight: '18px'
- }
-
- const iconStyle = {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    gap: '30px',
-   
- }
-
- const arrowIcon ={
-    borderRadius: '50%',
-    backgroundColor: '#F5F5F5',
-    padding: '10%',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    
-    
- }
-
-const colonStyle = {
-    color: '#FFAD33'
-}
-
-
-
 
 export default SectionTwo;
 

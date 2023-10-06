@@ -222,7 +222,7 @@ const Products = () => {
               spaceBetween: 10, // set this to 0 to center the card
             },
           }}
-             style={{width: "100%"}}
+             style={{width: "100%", backgroundColor: "white"}}
        
           >
             {productsArray.map((product, index) => (

@@ -15,7 +15,7 @@ const LoginPage = () => {
       />
     </div>
     <div className="w-full flex flex-col md:w-full justify-center px-1 sm:px-5">
-    <div className="flex flex-col w-full sm:w-full lg:w-full xl:w-full px-0 md:px-10 lg:px-10 bg-white border border-white rounded-lg gap-3">
+    <div className="flex flex-col w-full sm:w-full lg:w-full xl:w-full px-4 md:px-[20px] bg-white border border-white rounded-lg gap-3">
         <h2 className="text-xl sm:text-3xl font-medium">Log in to Buy Solar</h2>
         <h2 className="w-full text-base font-medium">Enter your details below</h2>
         <div className="mb-4">

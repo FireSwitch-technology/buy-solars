@@ -122,16 +122,16 @@ const WishList = () => {
         <div style={{ display: 'flex', flexDirection: 'column', width: '100%', justifyContent: 'center', alignItems: 'center', backgroundColor: '#fff',  }}>
   <div style={{ display: 'flex', flexDirection: 'column', width: '90%', justifyContent: 'center', alignItems: 'center' }}>
     <div style={{ display: 'flex', flexDirection: 'column', width: '100%', justifyContent: 'center', alignItems: 'center', gap: '20px', padding: '25px 0' }}>
-      <div style={{ display: 'flex', width: '100%', justifyContent: 'space-between', alignItems: 'center', gap: '20px', color: '#000',  }}>
+      <div style={{ display: 'flex', flexWrap: "wrap", width: '100%', justifyContent: 'space-between', alignItems: 'center', gap: '20px', color: '#000',  }}>
         <h2 style={{fontFamily: 'Poppins', fontSize: '18px'}}>Wishlist (4)</h2>
-        <button style={{ display: 'flex', justifyContent: "center", alignContent: "center", padding: '10px 25px', fontFamily: 'Poppins', fontSize: '15px', fontWeight: '500',color: '#000', backgroundColor: 'white', border: 'none', boxShadow: '5px 2px 5px grey', borderRadius: '5px' }}>Move All To Bag</button>
+        <button style={{ display: 'flex', justifyContent: "center", alignContent: "center", padding: '10px 20px', fontFamily: 'Poppins', fontSize: '15px', fontWeight: '500',color: '#000', backgroundColor: 'white', border: 'none', boxShadow: '5px 2px 5px grey', borderRadius: '5px' }}>Move All To Bag</button>
       </div>
 
-      <div style={{ display: 'flex', width: '100%', justifyContent: 'center', alignItems: 'center', gap: '10px', color: '#fff',}}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', width: '100%', justifyContent: 'center', alignItems: 'center', gap: '10px', color: '#fff',}}>
         
       {wishItems.map((product, index) => (
   <>
-    <div key={index} style={{ display: 'flex', flexDirection: 'column', width: '100%', justifyContent: 'center', alignItems: 'center', backgroundColor: '#F5F5F5' }}>
+    <div key={index} style={{ flexGrow: 1, flexBasis: 200, flexDirection: 'column', width: '100%', justifyContent: 'center', alignItems: 'center', backgroundColor: '#F5F5F5' }}>
 
   <div style={{ display: 'flex', width: '100%', justifyContent: 'space-between', alignItems: 'center',  padding: '10px'}}>
               <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: '#DB4444', padding: '5px 10px', border: 'none', borderRadius: '5px' }}>{product.percentilePrice}</div>
@@ -141,7 +141,7 @@ const WishList = () => {
                  <div style={{width: '100%', height: '10rem', overflow: 'hidden', display: "flex", justifyContent: 'center', alignItems: 'center'}}> <img style={{width: '100%'}} src={product.image} alt="Gucci-Hand-Bag"  /></div>
                   <button style={{ display: "flex",  backgroundColor: '#000', width: '100%', justifyContent: "center", alignItems: "center", padding: '10px 0', border: 'none', gap: '10px', fontSize: '20px' }}>
                  <div style={{color: 'white'}}> {product.cartIcon}</div>
-                      <h5 style={{ color: '#fff', fontFamily: 'Poppins', fontSize: '12px', fontWeight: 400 }}>Add To Cart</h5>
+                      <h5 style={{ color: '#fff', fontFamily: 'Poppins', fontSize: '12px',marginBottom: 0, fontWeight: 400 }}>Add To Cart</h5>
                   </button>
                   <div style={productDetailsStyle}>
                       <div>{product.title}</div>
@@ -159,19 +159,19 @@ const WishList = () => {
 
 {/* Second Section Starts Here*/}
 
-      <div style={{ display: 'flex', width: '100%', justifyContent: 'space-between', alignItems: 'center', gap: '20px', color: '#000', padding: '15px 0' }}>
+      <div style={{ display: 'flex',flexWrap: 'wrap', width: '100%', justifyContent: 'space-between', alignItems: 'center', gap: '20px', color: '#000', padding: '15px 0' }}>
       <div style={{display: "flex", gap: '5px', justifyContent: 'center', alignItems: 'flex-end'}}>
       <div style={rectangle}></div>
         <h2 style={{fontFamily: 'Poppins', fontSize: '18px'}}>Just For You</h2>
       </div>
-        <button style={{ display: 'flex', justifyContent: "center", alignContent: "center", padding: '10px 25px', fontFamily: 'Poppins', fontSize: '15px', fontWeight: '500',color: '#000', backgroundColor: 'white', border: 'grey', boxShadow: '5px 2px 5px grey', borderRadius: '5px' }}>See All</button>
+        <button style={{display: 'flex', justifyContent: "center", alignContent: "center", padding: '10px 25px', fontFamily: 'Poppins', fontSize: '15px', fontWeight: '500',color: '#000', backgroundColor: 'white', border: 'grey', boxShadow: '5px 2px 5px grey', borderRadius: '5px' }}>See All</button>
       </div>
 
-      <div style={{ display: 'flex', width: '100%', justifyContent: 'center', alignItems: 'center', gap: '10px', color: '#fff',}}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', width: '100%', justifyContent: 'center', alignItems: 'center', gap: '10px', color: '#fff',}}>
         
       {yourItems.map((product, index) => (
   <>
-    <div key={index} style={{ display: 'flex', flexDirection: 'column', width: '100%', justifyContent: 'center', alignItems: 'center', backgroundColor: '#F5F5F5' }}>
+    <div key={index} style={{ flexGrow: 1, flexBasis: 200, flexDirection: 'column', width: '100%', justifyContent: 'center', alignItems: 'center', backgroundColor: '#F5F5F5' }}>
 
   <div style={{ display: 'flex', width: '100%', justifyContent: 'space-between', alignItems: 'center',  padding: '10px'}}>
               <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: '#DB4444', padding: '5px 10px', border: 'none', borderRadius: '5px' }}>{product.percentilePrice}</div>

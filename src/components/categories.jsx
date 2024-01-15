@@ -4,6 +4,39 @@ import Styles from '@/styles/mycategory.module.css'
 const CategorySection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const initialTimeRemaining = {
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+}
+const [timeRemaining, setTimeRemaining] = useState(initialTimeRemaining)
+const targetTime = new Date(2023, 10, 1, 0 , 0 ,0)
+
+const handleTimeChange = () => {
+    setInterval( () => {
+        const currentTime = new Date()
+        const timeDiff = targetTime > currentTime ? targetTime - currentTime : 0
+        const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24))  
+        const afterdays = timeDiff % (1000 * 60 * 60 * 24)
+
+        const hours = Math.floor(afterdays / (1000 * 60 * 60))
+        let afterhours = afterdays % (1000 * 60 * 60)
+
+        const minutes = Math.floor(afterhours / 60000)
+        let afterminutes = afterhours % 60000
+        const seconds = Math.floor(afterminutes/1000)
+
+        setTimeRemaining( (prevVal) => ({
+            ...prevVal,
+            days,
+            hours,
+            minutes,
+            seconds
+        }) )
+    }, 1000 )
+}
+
   const carouselItems = [
     {
       image2: "/images/batt.png"
@@ -26,6 +59,7 @@ const CategorySection = () => {
   };
 
   useEffect(() => {
+    handleTimeChange()
     const interval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
     return () => clearInterval(interval); // Clean up the interval on component unmount
   }, []);
@@ -42,20 +76,20 @@ const CategorySection = () => {
   
    <div className={Styles.gen6}>
    <div className={Styles.circleStyle}>
-<h6 className={Styles.circleTextStyle}>23</h6>
+<h6 className={Styles.circleTextStyle}>{timeRemaining.seconds}</h6>
 <h6 className={Styles.circleTextStyle}>Seconds</h6>
 </div>
 <div className={Styles.circleStyle}>
-<h6 className={Styles.circleTextStyle}>23</h6>
+<h6 className={Styles.circleTextStyle}>{timeRemaining.minutes}</h6>
 <h6 className={Styles.circleTextStyle}>Minute</h6>
 </div>
 
 <div className={Styles.circleStyle}>
-<h6 className={Styles.circleTextStyle}>23</h6>
+<h6 className={Styles.circleTextStyle}>{timeRemaining.hours}</h6>
 <h6 className={Styles.circleTextStyle}>Hours</h6>
 </div>
 <div className={Styles.circleStyle}>
-<h6 className={Styles.circleTextStyle}>23</h6>
+<h6 className={Styles.circleTextStyle}>{timeRemaining.days}</h6>
 <h6 className={Styles.circleTextStyle}>Day</h6>
 </div>
    </div>

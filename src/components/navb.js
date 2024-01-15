@@ -6,9 +6,16 @@ import { FaSearch } from 'react-icons/fa';
 import { GrFavorite } from 'react-icons/gr';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { BsPersonDown } from 'react-icons/bs';
+import Router from "next/router";
 
 export default function NBar() {
 	const [nav, setNav] = useState(false);
+	const [isListVisible, setIsListVisible] = useState(false);
+
+	const toggleList = (isVisible) => {
+		setIsListVisible(isVisible);
+	  };
+	  
 
 	return (
 		<>
@@ -47,11 +54,36 @@ export default function NBar() {
               />
               <FaSearch className="absolute top-1/2 transform -translate-y-1/2 right-2 text-black text-lg" />
             </div>
-            <GrFavorite className="text-black text-3xl" />
+
+			
+			<Link href='/mywishlist' > <GrFavorite  className="text-3xl" /></Link>
+              
             <Link href="/cart" className="text-black no-underline">
               <AiOutlineShoppingCart className="text-3xl" />
             </Link>
-            <BsPersonDown className="text-3xl cursor-pointer" />
+			<div
+  className="text-black text-3xl cursor-pointer relative"
+  onMouseEnter={() => toggleList(true)}
+  onMouseLeave={() => toggleList(false)}
+>
+  <BsPersonDown />
+
+  {isListVisible && (
+    <ul className="absolute top-full right-0 bg-white border border-none text-[15px] p-0 m-0 flex flex-col justify-start">
+      <li onClick={() => Router.push("/account")} className="no-underline flex-auto text-black cursor-pointer py-0 px-[50px] w-full m-0">
+        My Profile
+      </li>
+      <li onClick={() => Router.push("/contact")} className="no-underline flex-auto text-black cursor-pointer py-0 px-[50px] w-full m-0">
+        Address Book
+      </li>
+      <li onClick={() => Router.push("/payment")} className="no-underline flex-auto text-black cursor-pointer py-0 px-[50px] w-full m-0">
+        My Payment Options
+      </li>
+    </ul>
+  )}
+</div>
+
+
           </div>
 							</div>
 

@@ -18,7 +18,7 @@ const Error404 = () => {
                  
                 </div>
                    <h1 className={Styles.Error}>404 Not Found</h1>
-                   <p className={Styles.pText}>Your visited page not found. You may go home page.</p>
+                   <p className={Styles.pText}>Your visited page not found. You may go <Link href='/'>home page</Link>.</p>
 <button className={Styles.btnHome}><Link className={Styles.links} href="/">Back to home page</Link></button>
                     </div>
                     </div>

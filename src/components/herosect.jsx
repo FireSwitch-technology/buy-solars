@@ -53,7 +53,7 @@ const HeroSection = () => {
     },
   ];
 
-  const category = ["GreatJoe", "Battery", "Charge Controller", "Solar Electronics", "Cables"]
+  const category = ["Panels", "Battery", "Charge Controller", "Solar Electronics", "Cables"]
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
